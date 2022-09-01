@@ -59,10 +59,20 @@ footer {
 }
 
 /* Future Forecast */
-.forcast-list {
+.future-forecast-item {
+  text-align: center;
   margin-top: 24px;
   padding: 0 24px;
 }
+
+.future-forecast-description {
+  font-size: 12px;
+  font-weight: 200;
+  text-transform: uppercase;
+  padding: 0;
+  text-align: center;
+}
+
 .day-title {
   font-size: 12px;
   font-weight: 200;
@@ -70,12 +80,16 @@ footer {
   padding: 0;
 }
 
-.future-forecast {
+.weather-icon {
+  font-size: 24px;
+}
+
+.future-forecast-item {
   padding: 24px 0;
   color: rgba(0, 0, 0, 0.9);
 }
 
-.future-forecast:hover {
+.future-forecast-item:hover {
   background-color: rgba(249, 249, 249, 0.5);
   cursor: pointer;
 }

@@ -36,13 +36,21 @@ function getInfo(response) {
   locationTempElement = document.querySelector("#temp-today");
   locationTempElement.innerHTML = `🌡 ${locationTemp}ºC`;
 
-  /* let locationRain = response.data.rain;
-  locationRainElement = document.querySelector("#rain-today");
-  locationRainElement.innerHTML = `☔️ ${locationRain} mm`;*/
-
   let locationWind = Math.round(response.data.wind.speed);
   locationWindElement = document.querySelector("#wind-today");
   locationWindElement.innerHTML = `🍃 ${locationWind} m/s`;
+  /*
+  if (response.data.weather.description === "Rain" )
+    let locationRain = data.weather.description;
+      locationRainElement = document.querySelector("#rain-today");
+      locationRainElement.innerHTML = `☔️ ${locationRain} mm`;
+      {
+    } else {
+      let locationRain = "0";
+          locationRainElement = document.querySelector("#rain-today");
+          locationRainElement.innerHTML = `☔️ ${locationRain} mm`;
+
+  }*/
 }
 
 function displayCurrentLocation(event) {

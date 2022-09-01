@@ -20,36 +20,42 @@ footer {
   text-transform: uppercase;
 }
 
+/* Active city name & search bar */
+.web-logo {
+  width: 50px;
+}
+
 .todays-date {
   font-size: 12px;
 }
 
-.todays-weather {
-  padding: 24px 0;
+.navbar {
+  margin: 8px 0;
+}
+
+/* Weather highlight*/
+.weather-highlight-wrapper {
+  padding: 32px 0;
   font-size: 24px;
 }
-.today.title {
+
+.weather-highlight-title {
+  margin: 16px;
   font-size: 12px;
 }
 
-.weather-today-list {
-  margin: 24px;
+.weather-highlight-list {
+  margin: 48px 0;
+  padding: 0;
 }
-.weather-today-list-item {
+.weather-highlight-item {
   display: inline;
-  margin: 24px;
+  margin-right: 16%;
 }
 
 .today.weather-icon {
   font-size: 48px;
   text-align: center;
-}
-
-.logo {
-  width: 100px;
-}
-.navbar {
-  margin: 8px 0;
 }
 
 .forcast-list {

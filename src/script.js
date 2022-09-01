@@ -2,7 +2,6 @@
 function searchCity(event) {
   event.preventDefault();
   getCityName();
-  displayDate();
 }
 
 function getCityName(position) {
@@ -14,7 +13,7 @@ function getCityName(position) {
   let apiKey = "7fa08a5cce73b5c1c5b2cb4406f7781a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&units=metric&appid=${apiKey}`;
 
-  axios.get(apiUrl).then(getInfo);
+  axios.get(apiUrl).then(getInfo).then(displayDate);
 }
 
 //Getting & displaying current weather based on location
@@ -55,9 +54,10 @@ function getInfo(response) {
 
 function displayCurrentLocation(event) {
   event.preventDefault();
-  displayDate();
 
-  navigator.geolocation.getCurrentPosition(getCurrentLocation);
+  navigator.geolocation
+    .getCurrentPosition(getCurrentLocation)
+    .then(displayDate);
 }
 
 //Show todays date

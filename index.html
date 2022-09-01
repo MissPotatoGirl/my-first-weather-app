@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
-
+    <!-- Bootstrap code -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
     <!-- Google font code -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome -->
-    <script
-      src="https://kit.fontawesome.com/6c1a659b26.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Talkes to the API's -->
+    <script src="https://kit.fontawesome.com/6c1a659b26.js" crossorigin="anonymous"></script>
+    
+    <!-- Axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <!-- Style sheet-->
-    <link rel="stylesheet" href="src/stryle.css" />
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="src/styles.css">
+
     <title>Weather 🌦</title>
   </head>
 
   <body>
     <div class="container body">
-      <!-- Nav bar -->
+      <!-- Nav bar-->
       <div class="row navbar">
         <div class="col-1">
-          <img src="images/logo.png" alt="logo" class="logo" />
+          <img src="images/logo.png" alt="logo" class="logo">
         </div>
         <div class="col-3 active-city-wrapper">
           <h1 class="active-city-name">Oslo</h1>
@@ -42,47 +38,38 @@
           <nav class="navbar">
             <div class="container justify-content-end">
               <form class="d-inline-flex" role="search">
-                <input
-                  id="search-input"
-                  class="form-control"
-                  type="search"
-                  placeholder="Search.."
-                  aria-label="Search"
-                />
+                <input id="search-input" class="form-control" type="search" placeholder="Search.." aria-label="Search">
                 <button class="btn" type="submit" id="search-city">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <button class="btn" type="submit" id="current-location">
-                  <i class="fa-solid fa-location-pin"></i>
+                 <i class="fa-solid fa-location-pin"></i>
                 </button>
               </form>
             </div>
           </nav>
         </div>
-      </div>
-
-      <!-- Todays Weather-->
-      <div class="container todays-weather">
-        <div class="row">
-          <div class="col-8">
-            <div class="today title">Weather right now</div>
-            <ul class="weather-today-list">
-              <li class="weather-today-list-item" id="temp-today">🌡 18ºC</li>
-              <li class="weather-today-list-item" id="rain-today">☔️ 6 mm</li>
-              <li class="weather-today-list-item" id="wind-today">🍃 0 m/s</li>
-            </ul>
-          </div>
-          <div class="col-4">
-            <div class="today weather-icon">☀️</div>
-          </div>
         </div>
+   
+        <div class="container todays-weather">
+          <div class="row">
+            <div class="col-8">
+              <div class="today title">Weather right now</div> 
+                <ul class="weather-today-list">
+                  <li class="weather-today-list-item" id="temp-today">🌡 18ºC</li>
+                  <li class="weather-today-list-item" id="rain-today">☔️ 6 mm</li>
+                  <li class="weather-today-list-item" id="wind-today">🍃 0 m/s</li>
+                </ul>
+            </div>
+            <div class="col-4">
+              <div class="today weather-icon">☀️</div>
+            </div>
+          </div>
       </div>
-
-      <!-- Week forcast-->
+    
+      <!-- Detailed forecast -->
       <div class="container forcast-list"></div>
         <ul class="list-group list-group-flush">
-
-          <!-- Row titles -->
           <li class="list-group-item days">
             <div class="row">
               <div class="col-2"></div>
@@ -94,8 +81,7 @@
               <div class="col-2 table-description">Rain</div>
               <div class="col-2 table-description">Wind</div>
           </li>
-
-          <!--Today -->
+          <!-- Today -->
           <li class="list-group-item city-forcast"> 
             <div class="row">
               <div class="col-2 day">Today</div>
@@ -122,8 +108,9 @@
             </div>
           </li>
         </div>
-        </div>
+      </div>   
     </div>
-    <script src="src/script.js"></script>
+    <footer>A service from the Meteorological Institute</footer>
+    <script src="src/index.js"></script>
   </body>
 </html>

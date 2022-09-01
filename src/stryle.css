@@ -8,13 +8,67 @@ hr {
   color: rgba(0, 0, 0, 0.35);
   width: 100%;
 }
-
-.navbar {
-  margin: 8px 0;
+footer {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 16px 24px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 8px;
+  text-transform: uppercase;
 }
+
+.todays-date {
+  font-size: 12px;
+}
+
+.todays-weather {
+  padding: 24px 0;
+  font-size: 24px;
+}
+.today.title {
+  font-size: 12px;
+}
+
+.weather-today-list {
+  margin: 24px;
+}
+.weather-today-list-item {
+  display: inline;
+  margin: 24px;
+}
+
+.today.weather-icon {
+  font-size: 48px;
+  text-align: center;
+}
+
 .logo {
   width: 50px;
 }
-.todays-date {
-  font-size: 12px;
+.navbar {
+  margin: 8px 0;
+}
+
+.forcast-list {
+  margin-top: 24px;
+  padding: 0 24px;
+}
+.days {
+  font-size: 8px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.city-forcast {
+  padding: 24px 0;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.city-forcast:hover {
+  background-color: rgba(249, 249, 249, 0.5);
+  cursor: pointer;
 }

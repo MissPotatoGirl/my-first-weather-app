@@ -3,6 +3,12 @@ body {
   margin: 128px auto;
 }
 
+hr {
+  margin: 2px auto;
+  color: rgba(0, 0, 0, 0.35);
+  width: 100%;
+}
+
 .navbar {
   margin: 8px 0;
 }

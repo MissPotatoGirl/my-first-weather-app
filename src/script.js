@@ -40,7 +40,7 @@ function getInfo(response) {
   locationWindElement = document.querySelector("#wind-today");
   locationWindElement.innerHTML = `🍃 ${locationWind} m/s`;
   /*
-  if (response.data.weather.description === "Rain" )
+  if (response.data.weather.description === "Rain" || response.data.weather.description === "Drizzle")
     let locationRain = data.weather.description;
       locationRainElement = document.querySelector("#rain-today");
       locationRainElement.innerHTML = `☔️ ${locationRain} mm`;

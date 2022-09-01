@@ -61,6 +61,7 @@
         </div>
       </div>
 
+      <!-- Todays Weather-->
       <div class="container todays-weather">
         <div class="row">
           <div class="col-8">
@@ -76,6 +77,52 @@
           </div>
         </div>
       </div>
+
+      <!-- Week forcast-->
+      <div class="container forcast-list"></div>
+        <ul class="list-group list-group-flush">
+
+          <!-- Row titles -->
+          <li class="list-group-item days">
+            <div class="row">
+              <div class="col-2"></div>
+              <div class="col-1 table-description">Night</div>
+              <div class="col-1 table-description">Morning</div>
+              <div class="col-1 table-description">Afternoon</div>
+              <div class="col-1 table-description">Evening</div>
+              <div class="col-2 table-description">Max/min temoerature</div>
+              <div class="col-2 table-description">Rain</div>
+              <div class="col-2 table-description">Wind</div>
+          </li>
+
+          <!--Today -->
+          <li class="list-group-item city-forcast"> 
+            <div class="row">
+              <div class="col-2 day">Today</div>
+              <div class="col-1 weather-icon">🌙</div>
+              <div class="col-1 weather-icon">⛅️</div>
+              <div class="col-1 weather-icon">🌦</div>
+              <div class="col-1 weather-icon">⛅️</div>
+              <div class="col-2 temperature">24&#8451;</div>
+              <div class="col-2 rain">0 mm</div>
+              <div class="col-2 wind">6 m/s</div>
+            </div>
+          </li>
+          <!-- Tomorrow -->
+          <li class="list-group-item city-forcast"> 
+            <div class="row">
+              <div class="col-2 day">Tomorrow</div>
+              <div class="col-1 weather-icon">🌙</div>
+              <div class="col-1 weather-icon">⛅️</div>
+              <div class="col-1 weather-icon">🌦</div>
+              <div class="col-1 weather-icon">⛅️</div>
+              <div class="col-2 temperature">24&#8451;</div>
+              <div class="col-2 rain">0 mm</div>
+              <div class="col-2 wind">6 m/s</div>
+            </div>
+          </li>
+        </div>
+        </div>
     </div>
     <script src="src/script.js"></script>
   </body>

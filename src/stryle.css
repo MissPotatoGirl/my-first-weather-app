@@ -1,0 +1,14 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 128px auto;
+}
+
+.navbar {
+  margin: 8px 0;
+}
+.logo {
+  width: 50px;
+}
+.todays-date {
+  font-size: 12px;
+}

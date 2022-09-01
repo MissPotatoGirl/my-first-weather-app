@@ -33,6 +33,31 @@
         <div class="col-1">
           <img src="images/logo.png" alt="logo" class="logo" />
         </div>
+        <div class="col-3 active-city-wrapper">
+          <h1 class="active-city-name">Oslo</h1>
+          <h3 class="todays-date"></h3>
+        </div>
+        <div class="col-8">
+          <nav class="navbar">
+            <div class="container justify-content-end">
+              <form class="d-inline-flex" role="search">
+                <input
+                  id="search-input"
+                  class="form-control"
+                  type="search"
+                  placeholder="Search.."
+                  aria-label="Search"
+                />
+                <button class="btn" type="submit" id="search-city">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="btn" type="submit" id="current-location">
+                  <i class="fa-solid fa-location-pin"></i>
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
     <script src="src/script.js"></script>

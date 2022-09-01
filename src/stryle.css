@@ -54,8 +54,8 @@ footer {
 }
 
 .today.weather-icon {
-  font-size: 48px;
-  text-align: center;
+  font-size: 100px;
+  text-align: left;
 }
 
 .forcast-list {

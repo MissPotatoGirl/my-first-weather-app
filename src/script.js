@@ -13,7 +13,7 @@ function getCityName(position) {
   let apiKey = "7fa08a5cce73b5c1c5b2cb4406f7781a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&units=metric&appid=${apiKey}`;
 
-  axios.get(apiUrl).then(getInfo).then(displayDate);
+  axios.get(apiUrl).then(getInfo);
 }
 
 //Getting & displaying current weather based on location
@@ -27,7 +27,6 @@ function getCurrentLocation(position) {
 }
 
 function getInfo(response) {
-  console.log(response);
   let city = document.querySelector(".active-city-name");
   city.innerHTML = response.data.name;
 
@@ -55,13 +54,11 @@ function getInfo(response) {
 function displayCurrentLocation(event) {
   event.preventDefault();
 
-  navigator.geolocation
-    .getCurrentPosition(getCurrentLocation)
-    .then(displayDate);
+  navigator.geolocation.getCurrentPosition(getCurrentLocation);
 }
 
 //Show todays date
-function displayDate() {
+function displayDates() {
   let now = new Date();
 
   let getDay = now.getDay();
@@ -86,13 +83,24 @@ function displayDate() {
   let todaysMonth = month[getMonth];
 
   let today = now.getDate();
+  let tomorrow = now.getDate() + 1;
+  let dayAfterTomorrow = tomorrow + 1;
 
   let hours = now.getHours();
   let minutes = now.getMinutes();
 
   let todaysDate = document.querySelector(".todays-date");
-  todaysDate.innerHTML = `${todayName} ${today} ${todaysMonth}, ${hours}:${minutes}`;
+  todaysDate.innerHTML = `${todayName} ${today}. ${todaysMonth}., ${hours}:${minutes}`;
+
+  let tomorrowDate = document.querySelector(".day-title-1");
+  tomorrowDate.innerHTML = `${tomorrow}. ${todaysMonth}.`;
+
+  let afterTomorrow = document.querySelector(".day-title-2");
+  afterTomorrow.innerHTML = `${dayAfterTomorrow}. ${todaysMonth}.`;
 }
+
+/* Display dates*/
+displayDates();
 
 //set EventListners on buttons
 let searchCityButton = document.querySelector("#search-city");

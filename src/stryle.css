@@ -40,7 +40,7 @@ footer {
 }
 
 .weather-highlight-title {
-  margin: 16px;
+  margin: 16px 0;
   font-size: 12px;
 }
 
@@ -58,6 +58,7 @@ footer {
   text-align: left;
 }
 
+/*Long-term forecast*/
 .forcast-list {
   margin-top: 24px;
   padding: 0 24px;

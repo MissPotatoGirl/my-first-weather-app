@@ -1,3 +1,12 @@
+function displayPlaceholderCity() {
+  let latitude = "59.9156334";
+  let longitude = "10.543931";
+  let apiKey = "7fa08a5cce73b5c1c5b2cb4406f7781a";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+
+  axios.get(apiUrl).then(getInfo);
+}
+
 //Get & display current weather based on searched name
 function searchCity(event) {
   event.preventDefault();
@@ -18,6 +27,7 @@ function getCityName(position) {
 
 //Getting & displaying current weather based on location
 function getCurrentLocation(position) {
+  console.log(position);
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiKey = "7fa08a5cce73b5c1c5b2cb4406f7781a";
@@ -99,8 +109,9 @@ function displayDates() {
   afterTomorrow.innerHTML = `${dayAfterTomorrow}. ${todaysMonth}.`;
 }
 
-/* Display dates*/
+/* Display dates & placeholder weather*/
 displayDates();
+displayPlaceholderCity();
 
 //set EventListners on buttons
 let searchCityButton = document.querySelector("#search-city");

@@ -85,8 +85,10 @@ footer {
 }
 
 .future-forecast-item {
+  margin: 0;
   padding: 24px 0;
   color: rgba(0, 0, 0, 0.9);
+  vertical-align: middle;
 }
 
 .future-forecast-item:hover {

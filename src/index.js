@@ -47,19 +47,19 @@ function getInfo(response) {
   let locationWind = Math.round(response.data.wind.speed);
   locationWindElement = document.querySelector("#wind-today");
   locationWindElement.innerHTML = `🍃 ${locationWind} m/s`;
-  /*
-  if (response.data.weather.description === "Rain" || response.data.weather.description === "Drizzle")
-    let locationRain = data.weather.description;
+  
+  if (
+    response.data.weather[0].main === "Rain" || 
+    response.data.weather[0].main === "Drizzle"
+    ){
+      let locationRain = response.data.rain["1h"];
       locationRainElement = document.querySelector("#rain-today");
       locationRainElement.innerHTML = `☔️ ${locationRain} mm`;
-      {
     } else {
       let locationRain = "0";
           locationRainElement = document.querySelector("#rain-today");
           locationRainElement.innerHTML = `☔️ ${locationRain} mm`;
-
-  }*/
-}
+    }
 
 function displayCurrentLocation(event) {
   event.preventDefault();

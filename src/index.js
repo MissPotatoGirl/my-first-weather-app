@@ -47,20 +47,20 @@ function getInfo(response) {
   let locationWind = Math.round(response.data.wind.speed);
   locationWindElement = document.querySelector("#wind-today");
   locationWindElement.innerHTML = `🍃 ${locationWind} m/s`;
-  
-  if (
-    response.data.weather[0].main === "Rain" || 
-    response.data.weather[0].main === "Drizzle"
-    ){
-      let locationRain = response.data.rain["1h"];
-      locationRainElement = document.querySelector("#rain-today");
-      locationRainElement.innerHTML = `☔️ ${locationRain} mm`;
-    } else {
-      let locationRain = "0";
-          locationRainElement = document.querySelector("#rain-today");
-          locationRainElement.innerHTML = `☔️ ${locationRain} mm`;
-    }
 
+  if (
+    response.data.weather[0].main === "Rain" ||
+    response.data.weather[0].main === "Drizzle"
+  ) {
+    let locationRain = response.data.rain["1h"];
+    locationRainElement = document.querySelector("#rain-today");
+    locationRainElement.innerHTML = `☔️ ${locationRain} mm`;
+  } else {
+    let locationRain = "0";
+    locationRainElement = document.querySelector("#rain-today");
+    locationRainElement.innerHTML = `☔️ ${locationRain} mm`;
+  }
+}
 function displayCurrentLocation(event) {
   event.preventDefault();
 
@@ -100,7 +100,7 @@ function displayDates() {
   let minutes = now.getMinutes();
 
   let todaysDate = document.querySelector(".todays-date");
-  todaysDate.innerHTML = `${todayName} ${today}. ${todaysMonth}., ${hours}:${minutes}`;
+  todaysDate.innerHTML = `${todayName} ${today}. ${todaysMonth}, ${hours}:${minutes}`;
 
   let tomorrowDate = document.querySelector(".day-title-1");
   tomorrowDate.innerHTML = `${tomorrow}. ${todaysMonth}.`;
